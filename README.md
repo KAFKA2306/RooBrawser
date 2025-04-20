@@ -278,6 +278,24 @@ This project is licensed under the **MIT License**. See the `LICENSE` file for d
 *   **Unofficial:** This is an unofficial tool and is not affiliated with or endorsed by Perplexity AI.
 *   **Website Changes:** This tool relies on the current structure of the `perplexity.ai` website. Changes to their site **will likely break** this tool, requiring updates to the selectors (`config/selectors.json`) and potentially the core logic. Use at your own risk.
 *   **Terms of Service:** You are responsible for complying with Perplexity AI's Terms of Service, including any restrictions on automated access. Excessive use may lead to your IP being blocked.
+
+## 13. Running Tests
+
+To run the tests, use the following command:
+
+```
+pytest tests/
+```
+
+## 14. Contributing
+
+Contributions are welcome! Please follow these guidelines:
+
+1.  Fork the repository.
+2.  Create a new branch for your feature or bug fix.
+3.  Write tests for your changes.
+4.  Make sure all tests pass.
+5.  Submit a pull request.
 ```
 
 Citations:
