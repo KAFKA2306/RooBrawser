@@ -25,6 +25,7 @@ The core philosophy emphasizes reliability and maintainability through a state m
 
 | Component           | Technology            | Version | Notes                               |
 | :------------------ | :-------------------- | :------ | :---------------------------------- |
+|---------------------|-----------------------|---------|---------------------------------------|
 | Language            | Python                | 3.11.2+ |                                     |
 | Browser Automation  | Selenium              | 4.15.2  | For controlling the browser         |
 | Browser             | Firefox               | 128.0+  | Target browser for automation       |
@@ -82,12 +83,11 @@ The core philosophy emphasizes reliability and maintainability through a state m
     *   Review `config/selectors.json`. These are CSS selectors used to find elements on `perplexity.ai`. Update them *only* if Perplexity changes its website structure significantly.
 
 ## 5. Configuration
-
 ### 5.1 `config/settings.toml`
 
 This file controls the core behavior of the browser automation and session management.
 
-```
+
 [selenium]
 # Browser type (currently only "firefox" is fully supported)
 browser = "firefox"
