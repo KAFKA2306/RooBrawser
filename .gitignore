@@ -27,8 +27,6 @@ share/python-wheels/
 MANIFEST
 
 # PyInstaller
-#  Usually these files are written into a dist/ folder, but not always.
-#  For example, see issue #4022
 _MEI*
 *.pkg
 *.app
@@ -39,8 +37,11 @@ _MEI*
 # VSCode
 .vscode/
 
-# OS generated files #
-######################
+# Selenium / WebDriver runtime output
+geckodriver*.log
+chromedriver*.log
+
+# OS generated files
 .DS_Store
 .DS_Store?
 ._*
