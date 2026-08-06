@@ -1,11 +1,9 @@
 from __future__ import annotations
 
 import json
+import tomllib
 from pathlib import Path
 from typing import Any, Callable, Mapping
-
-import toml
-from selenium import webdriver
 
 from core.browser_control.browser_state import BrowserState
 
@@ -45,7 +43,8 @@ class PerplexityBrowser:
         settings_path = self._config_dir / "settings.toml"
         selectors_path = self._config_dir / "selectors.json"
 
-        settings = toml.load(settings_path)
+        with settings_path.open("rb") as settings_file:
+            settings = tomllib.load(settings_file)
         with selectors_path.open("r", encoding="utf-8") as selectors_file:
             selectors = json.load(selectors_file)
         return {"settings": settings, "selectors": selectors}
@@ -54,6 +53,9 @@ class PerplexityBrowser:
         browser_type = self.config["settings"].get("browser_type", "firefox").lower()
         if browser_type != "firefox":
             raise ValueError(f"Unsupported browser type: {browser_type}")
+
+        from selenium import webdriver
+
         return webdriver.Firefox()
 
     def start(self) -> Any:
